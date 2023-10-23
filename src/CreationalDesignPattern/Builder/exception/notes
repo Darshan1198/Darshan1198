@@ -1,0 +1,90 @@
+public static Builder CreateNewBuild(){
+        return  new Builder();
+    }    used  to create the  new  builder  instance
+
+The createBuilder method isn't explicitly provided in the code you've posted.
+ Instead, the code includes a CreateNewBuild method, which is a static factory
+ method that returns a new instance of the Builder class.
+ This method is used to initiate the process of constructing a Student object using the Builder pattern.
+
+ Student student = Student.CreateNewBuild()  // Create a new Builder object
+     .setName("John")                         // Set name using builder
+     .setPhoneNumber("123-456-7890")          // Set phone number using builder
+     .setId(1)                                // Set ID using builder
+     .setAge(25)                              // Set age using builder
+     .setPsp("PSP123")                        // Set PSP using builder
+     .build();                                // Build the Student object
+
+ System.out.println(student.toString());      // Print the Student object
+
+
+
+
+The public Student build() method is a crucial part of the Builder pattern.
+It is responsible for creating and returning the final object, in this case,
+a Student object, based on the attributes and settings accumulated in the Builder instance.
+
+Here's what each part of this method does:
+
+validate(): Before creating the Student object, this method typically calls
+the validate method, which is responsible for checking if the attributes set in
+ the Builder instance meet certain criteria or constraints. In your code, it checks that the name is not null
+ and that the age falls within a specific range (between 20 and 60). If the validation fails,
+ it throws an exception to indicate that the object cannot be created with the provided data.
+
+return new Student(this): After passing the validation, this line creates a new Student object.
+It uses the this reference, which represents the current instance of the Builder class.
+The this reference contains all the attribute values that have been set in the Builder instance.
+So, by calling new Student(this), it essentially creates a new Student object and initializes it
+with the attribute values stored in the current Builder instance.
+This is why it's sometimes referred to as a "copy constructor."
+
+The return statement then returns the newly created Student object as the final result.
+
+The purpose of this build method is to separate the construction of the
+ Student object from the Student class and ensure that the object is created in a valid state.
+  It allows you to chain multiple setter methods to set attributes in a clean and fluent style,
+   and it provides a structured way to construct complex objects while enforcing validation rules.
+
+
+
+public Builder setPsp(String psp) {
+            this.psp = psp;
+            return this;
+        } in this  setter  why are we returning  this ?
+
+
+The return this; statement at the end of a setter method in the Builder pattern
+ is a common practice and is often referred to as "method chaining" or "fluent interface."
+ It allows you to set multiple attributes of an object in a single line of code while maintaining
+ a clean and readable coding style. Here's why it's used:
+
+Method Chaining: When a setter method returns this, it allows you to chain multiple setter
+ calls together in a single statement. For example:
+ builder.setAttr1(value1).setAttr2(value2).setAttr3(value3);
+This chaining makes the code more concise and readable,
+as you can see all the attribute assignments in one line, improving the clarity of the code.
+
+
+
+Fluent Interface: The use of return this; in setters is a common practice in implementing a "fluent interface."
+ A fluent interface is an object-oriented API design pattern that aims to make code more expressive and readable
+ by providing a chain of method calls that read like a sentence. For example, it allows you to create code that
+ reads like English, such as "set the name, set the age, and then build the object."
+
+ Method Chaining with the Builder Pattern: In the context of the Builder pattern,
+  the fluent interface technique is particularly useful. It allows you to set various attributes of an object
+  one after another and then call the build method to create the final object.
+   It helps simplify the code and provides a structured way to construct objects.
+
+ Here's how it works with a builder pattern:
+ Student student = Student.CreateNewBuild()
+     .setName("John")
+     .setPhoneNumber("123-456-7890")
+     .setId(1)
+     .setAge(25)
+     .setPsp("PSP123")
+     .build();
+Each setter returns the this reference, which points to the current instance of the builder,
+ allowing you to continue setting attributes one after another until you're ready to build the object.
+ It results in cleaner and more readable code, which is a significant advantage when constructing complex objects.
