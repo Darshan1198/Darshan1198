@@ -1,0 +1,10 @@
+Flyweight  design pattern  is  used  when  we  need  to create  lot of  object  of  A CLass.
+It s  a structural design  pattern  that optimizes  memory usage  by sharing  common  state between  multiple  objects
+
+
+Extrinsic :- properties  that change
+
+Intrinsic :- properties  that dont change
+
+
+
