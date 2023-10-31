@@ -4,9 +4,9 @@ public class Player {
      int  currentHealth ;
      int Ranking;
      int  score;
-      int  currentPosition;
+     int  currentPosition;
 
-      PlayerFw  fw;
+     PlayerFw  fw;
 
 
 
