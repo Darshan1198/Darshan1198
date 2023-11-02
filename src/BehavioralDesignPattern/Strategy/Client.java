@@ -9,10 +9,6 @@ public class Client {
         Transportationmode mode  = Transportationmode.CAR;
         GoogleMaps gm = getpathfinder(mode);
         gm.findPath("Banglore","Mysore");
-
-
-
-
         }
     public static GoogleMaps getpathfinder(Transportationmode mode){
         return switch (mode) {
