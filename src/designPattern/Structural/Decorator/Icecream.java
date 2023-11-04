@@ -1,0 +1,7 @@
+package designPattern.Structural.Decorator;
+
+public interface Icecream {
+    int  getCost();
+    String  getDesc();
+
+}
