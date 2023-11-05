@@ -38,7 +38,7 @@ public class Client {
 
         StudentRegistry obj  = StudentRegistry.instance;
 
-        for(StudentRegistry )
+        obj.getAPrototype("mertistudent");
 
     }
 }

@@ -1,7 +1,7 @@
 Adapter  design  pattern  is  A  structural design pattern
 
-Adapter  design  Pattern  ensures  that  tht  app code base  reamins maintainable
-while using  the  3rd  party codebase
+Adapter  design  Pattern  ensures  that  tht  app code base  remains maintainable
+while using  the  3rd  party codebase.
 
 It  allows  the  interface  of  an  existing  class  to be
 used  as  another  interface.
