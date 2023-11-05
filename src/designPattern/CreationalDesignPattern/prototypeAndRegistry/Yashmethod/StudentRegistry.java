@@ -1,4 +1,6 @@
-package designPattern.CreationalDesignPattern.prototypeAndRegistry;
+package designPattern.CreationalDesignPattern.prototypeAndRegistry.Yashmethod;
+
+import designPattern.CreationalDesignPattern.prototypeAndRegistry.Yashmethod.Student;
 
 import java.util.HashMap;
 

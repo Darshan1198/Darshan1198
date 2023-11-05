@@ -1,4 +1,4 @@
-package designPattern.CreationalDesignPattern.prototypeAndRegistry;
+package designPattern.CreationalDesignPattern.prototypeAndRegistry.Yashmethod;
 
 
     public class Student { // Step1: Create a Prototype class and define the attributes

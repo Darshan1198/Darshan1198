@@ -1,4 +1,4 @@
-package designPattern.CreationalDesignPattern.prototypeAndRegistry;
+package designPattern.CreationalDesignPattern.prototypeAndRegistry.Yashmethod;
 
 public class Client {
     public static void main(String[] args) {

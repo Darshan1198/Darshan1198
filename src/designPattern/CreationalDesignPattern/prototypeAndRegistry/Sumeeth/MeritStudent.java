@@ -22,5 +22,11 @@ public class MeritStudent extends Student{
         return  new MeritStudent(this);
     }
 
-
+    @Override
+    public String toString() {
+        return "MeritStudent{" +
+                "Scholarship=" + Scholarship +
+                "name="+getName()+
+                "age="+getAge()+'}';
+    }
 }

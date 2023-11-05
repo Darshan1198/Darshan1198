@@ -10,6 +10,8 @@ public class Client {
         reg.registerPrototype("Normalstudent", proto);
         MeritStudent  proto2  = new MeritStudent();
         proto2.setScholarship(100);
+        proto2.setName("yash");
+        proto2.setAge(24);
         reg.registerPrototype("meritstudent",proto2);
 
 
@@ -21,7 +23,7 @@ public class Client {
         Student s1 = new Student();
         s1.setAge(10);
         s1.setName("Harsh");
-
+//
         Student copy = getstudent(s1);
         System.out.println(copy.getName());
         System.out.println(copy.getAge());
@@ -31,9 +33,9 @@ public class Client {
         s2.setName("dashi");
         s2.setScholarship(100);
 
-        Student copy2  =  getstudent(s2);
-        System.out.println(copy2.getAge());
-        System.out.println(copy2.getName());
+//        Student copy2  =  getstudent(s2);
+//        System.out.println(copy2.getAge());
+//        System.out.println(copy2.getName());
         populateRegistry();
 
         StudentRegistry obj  = StudentRegistry.instance;
